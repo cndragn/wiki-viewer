@@ -7,6 +7,9 @@ body {
     background-color: #00b1dd;
 }
 
+a:hover {
+    text-decoration: none;
+}
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
