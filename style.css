@@ -33,13 +33,17 @@ h1 {
     color: #fff;
 }
 
+.header {
+    margin-top: 50px;
+}
+
 input#submit-button {
     font-variant: small-caps;
     font-size: 20px;
     padding: 2px 15px;
 }
 
-#random {
+#random, .footer {
     color: #fff;
     text-align: center;
 }
@@ -79,4 +83,14 @@ input#submit-button {
 
 .title-text {
     font-weight: 600;
+}
+
+.footer {
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #fff;
+        text-decoration: underline;
 }
