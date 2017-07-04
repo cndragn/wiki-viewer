@@ -7,27 +7,32 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link ref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="script.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <div class="container">
-            
+
             <div class="text-center">
-            <h1>Wikipedia Viewer</h1>
-            <div id="random"><a href="https://en.wikipedia.org/wiki/Special:Random">Random Article</a></div>
-            <div class="form-group">
-                <input type="search">
-                <button type="submit" class="btn">Search</button>
-            </div>
-            </div>
-            
-            
-            <div id="results">Results</div>
-            <p class="title">Title</p>
-            <p class="snippet">Snippet</p>
-            
+                <h1>Wikipedia Viewer</h1>
+                
+                  <div id="wikiSearch">
+    Enter query
+    <br>
+    <input id="query-field" type="text" name="query">
+    <br>
+    <input id="submit-button" type="button" value="Search" onclick="wikiSearch()">
+</div>
+
+<a id="random" href="http://en.wikipedia.org/wiki/Special:Random">Random article</a>
+
+<div id="display"></div>
+
+
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="script.js"></script>
+
     </body>
 </html>

@@ -1,27 +1,41 @@
 $(document).ready(function () {
- 
- var stuff = "";
- wikiSearch(stuff);
- 
- function wikiSearch(sea) {
-   var wikiData = "https://crossorigin.me/https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=meaning&format=json";
-   
-
-    $.getJSON(wikiData, function (data) {
-      
-      var title = data.query.search[0].title;
-      var snippet = data.query.search[0].snippet;
-      
-      //console.log(data.continue.sroffset);
-
-      console.log(title);
-      console.log(snippet);
-
-
-      $('.title').text(title);
-      $('.snippet').html(snippet);
+//Enter button fix to stop refreshing the page
+    $("#query-field").keyup(function (event) {
+        if (event.keyCode == 13) {
+            $("#submit-button").click();
+        }
     });
- }
- 
- 
 });
+
+function wikiSearch() {
+
+    var query = document.getElementById("query-field").value;
+    var wiki_api = 'https://en.wikipedia.org/w/api.php';
+
+    var api = "https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exlimit=max&format=json&exsentences=1&exintro=&explaintext=&generator=search&gsrlimit=10&gsrsearch=";
+    var wikilink = 'http://en.wikipedia.org/?curid=';
+
+    var link = api + query;
+    var html = "";
+
+    //alert(link);
+
+    $.ajax({
+        url: link,
+        type: "get",
+        dataType: "JSONP",
+        success: function (data) {
+            var results = data.query.pages;
+            var pgs = Object.keys(results);
+            pgs.forEach(function (page) {
+                var title = results[page].title;
+                var text = results[page].extract;
+                var pagelink = wikilink + results[page].pageid;
+
+                html += '<a href="' + pagelink + '" >' + '<div class="item">' + title + '<br>' + '<p class="description-text" >' + text + '</p>' + '</div></a>  <br> ';
+            });
+
+            $('#display').html(html);
+        }
+    });
+}
