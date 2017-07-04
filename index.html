@@ -7,30 +7,35 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
         <link ref="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="script.js"></script>
-        
+
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
 
-            <div class="text-center">
-                <h1>Wikipedia Viewer</h1>
-                
-                  <div id="wikiSearch">
-    Enter query
-    <br>
-    <input id="query-field" type="text" name="query">
-    <br>
-    <input id="submit-button" type="button" value="Search" onclick="wikiSearch()">
-</div>
+                <div class="header">
+                    <h1 class="text-center">Wikipedia Viewer</h1>
 
-<a id="random" href="http://en.wikipedia.org/wiki/Special:Random">Random article</a>
+                    <div class="form-group" id="search-form">
+                         <div class="row">
+                             <div class="col-sm-11 col-xs-12">
+                            <input id="query-field" class="form-control" type="text" name="query" placeholder="Search Wikipedia">
+                             </div>
+                             <div class="col-sm-1 col-xs-12 text-center">
 
-<div id="display"></div>
+                            <input id="submit-button" class="btn" type="button" value="Search" onclick="wikiSearch()">
+                             </div>
+                        </div>
+                        <a id="random" href="http://en.wikipedia.org/wiki/Special:Random">Be dazzled by a random wiki!</a>
+                    </div>
 
+                    
+                </div>
+
+                <div id="display"></div>
 
         </div>
 

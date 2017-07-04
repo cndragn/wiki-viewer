@@ -3,3 +3,46 @@
     Author     : Candice
 */
 
+body {
+    background-color: #00b1dd;
+}
+
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+h1 {
+    color: #fff;
+}
+
+#random {
+    color: #fff;
+}
+
+.form-group {
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-group .row {
+    margin-bottom: 15px;
+}
+
+.btn {
+    background-color: #f9b631;
+    color: #fff;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #f5cb77;
+}
+.btn:hover, .btn:focus, .btn.focus, .btn:active, .btn.active {
+  color: #fff;
+}
+#display {
+    background-color: #f6f6f6;
+}
+
