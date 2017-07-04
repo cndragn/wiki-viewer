@@ -32,7 +32,7 @@ function wikiSearch() {
                 var text = results[page].extract;
                 var pagelink = wikilink + results[page].pageid;
 
-                html += '<a href="' + pagelink + '" >' + '<div class="item">' + title + '<br>' + '<p class="description-text" >' + text + '</p>' + '</div></a>  <br> ';
+                html += '<br><a href="' + pagelink + '" >' + '<div class="item">' + '<p class="title-text" >' + title + '</p>' + '<br>' + '<p class="description-text" >' + text + '</p>' + '</div></a> ';
             });
 
             $('#display').html(html);
