@@ -5,14 +5,24 @@
 
 body {
     background-color: #00b1dd;
+    font-family: 'Poppins', Helvetica, Arial, Sans-Serif;
+    font-size: 16px;
 }
 
 p {
     margin: 0;
 }
+a {
+    color: #6c6c6c;
+}
+
+h1, .title-text {
+    font-family: 'Raleway', Helvetica, Arial, Sans-Serif;
+}
 
 a:hover {
     text-decoration: none;
+    color: #585858;
 }
 .container-fluid {
     padding-left: 0px;
@@ -21,6 +31,12 @@ a:hover {
 
 h1 {
     color: #fff;
+}
+
+input#submit-button {
+    font-variant: small-caps;
+    font-size: 20px;
+    padding: 2px 15px;
 }
 
 #random {
@@ -61,4 +77,6 @@ h1 {
     padding: 20px 30px;
 }
 
-
+.title-text {
+    font-weight: 600;
+}
