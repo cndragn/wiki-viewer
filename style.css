@@ -20,6 +20,10 @@ h1, .title-text {
     font-family: 'Raleway', Helvetica, Arial, Sans-Serif;
 }
 
+a {
+    text-decoration: underline;
+}
+
 a:hover {
     text-decoration: none;
     color: #585858;
@@ -39,7 +43,7 @@ h1 {
 
 input#query-field {
     max-width: 95%;
-    margin: 0 auto;
+    margin: 0 auto 15px;
 }
 
 input#submit-button {
