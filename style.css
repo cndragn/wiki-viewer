@@ -28,6 +28,12 @@ a:hover {
     text-decoration: none;
     color: #585858;
 }
+.item a {
+    text-decoration: none;
+}
+.item a:hover {
+    font-weight: bold;
+}
 .container-fluid {
     padding-left: 0px;
     padding-right: 0px;
