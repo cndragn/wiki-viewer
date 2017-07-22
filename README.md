@@ -19,7 +19,6 @@
 * Bootstrap
 * JavaScript
 * jQuery
-* AJAX
 * Wikipedia API
 
 
